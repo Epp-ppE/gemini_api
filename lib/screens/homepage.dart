@@ -90,11 +90,11 @@ class _HomepageState extends State<Homepage> {
                     // ),
                     child: _loading
                       ? CircularProgressIndicator(
-                          valueColor: AlwaysStoppedAnimation<Color>(Theme.of(context).colorScheme.primary),
+                          valueColor: AlwaysStoppedAnimation<Color>(Theme.of(context).colorScheme.tertiary),
                         )
                       : Icon(
                           Icons.send,
-                          color: Theme.of(context).colorScheme.primary,
+                          color: Theme.of(context).colorScheme.tertiary,
                         )
                   )
                 )
@@ -158,14 +158,14 @@ class _HomepageState extends State<Homepage> {
       border: OutlineInputBorder(
         borderRadius: BorderRadius.circular(15),
         borderSide: BorderSide(
-          color: Theme.of(context).colorScheme.primary,
+          color: Theme.of(context).colorScheme.secondary,
           width: 2
         )
       ),
       focusedBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(15),
         borderSide: BorderSide(
-          color: Theme.of(context).colorScheme.secondary,
+          color: Theme.of(context).colorScheme.primary,
           width: 2
         )
       ),

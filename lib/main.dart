@@ -39,9 +39,15 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Color(0xff0064FF)),
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: Color(0xff0064FF),
+          primary: Color(0xff4890FF),
+          secondary: Color(0xffF5F5F5),
+          tertiary: Color(0xff0064FF),
+        ),
         useMaterial3: true,
         primaryColor: Color(0xff0064FF),
+        secondaryHeaderColor: Color(0xffF5F5F5),
         scaffoldBackgroundColor: Colors.white,
         appBarTheme: AppBarTheme(
           backgroundColor: Color(0xff0064FF),
@@ -72,41 +78,8 @@ class MyApp extends StatelessWidget {
           ),
           titleMedium: TextStyle(
             fontSize: 14,
-            color: Colors.grey,
+            color: Colors.white,
           ),
-        ),
-        inputDecorationTheme: InputDecorationTheme(
-          border: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(8),
-            borderSide: BorderSide(color: Color(0xff0064FF)),
-          ),
-          focusedBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(8),
-            borderSide: BorderSide(color: Color(0xff0064FF)),
-          ),
-          enabledBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(8),
-            borderSide: BorderSide(color: Color(0xff0064FF)),
-          ),
-          labelStyle: TextStyle(color: Color(0xff0064FF)),
-          suffixIconColor: Color(0xff0064FF),
-        ),
-        checkboxTheme: CheckboxThemeData(
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(4),
-          ),
-          fillColor: WidgetStateProperty.all(Color(0xff0064FF)),
-        ),
-        buttonTheme: ButtonThemeData(
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(8),
-          ),
-          buttonColor: Color(0xff0064FF),
-          textTheme: ButtonTextTheme.primary,
-        ),
-        floatingActionButtonTheme: FloatingActionButtonThemeData(
-          backgroundColor: Color(0xff0064FF),
-          foregroundColor: Colors.white,
         ),
       ),
       home: Homepage(),
