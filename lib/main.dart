@@ -1,8 +1,24 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:gemini_api/screens/homepage.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
-void main() {
+Future<void> main() async {
+  try {
+    final file = File('.env');
+    if (await file.exists()) {
+      final contents = await file.readAsString();
+      print('File Contents: $contents');  // Log the contents to ensure it's being read
+    } else {
+      print('The .env file does not exist');
+    }
+  } catch (e) {
+    print('Error reading .env file: $e');
+  }
+
+  await dotenv.load(fileName: ".env");  
   // fix the screen orientation to portrait
   WidgetsFlutterBinding.ensureInitialized();
   SystemChrome.setPreferredOrientations([

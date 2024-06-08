@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gemini_api/widgets/message_widget.dart';
 import 'package:google_generative_ai/google_generative_ai.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 class Homepage extends StatefulWidget {
   const Homepage({super.key});
@@ -22,7 +23,7 @@ class _HomepageState extends State<Homepage> {
     super.initState();
     _model = GenerativeModel(
       model: 'gemini-pro', 
-      apiKey: "AIzaSyA60WSsvU6s3CiwB9H52PRIcAuejKSDLms"
+      apiKey: dotenv.env['API_KEY'] ?? '',
     );
     _chatSession = _model.startChat();
   }
